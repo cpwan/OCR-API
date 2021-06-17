@@ -1,4 +1,23 @@
 # OCR
+
+## Dependency
+- python 3.8
+- Flask
+
+## Build
+Option 1. Docker
+``docker-compose -f docker-compose.dev.yml up --build``
+
+Option 2. Manually install depedencies
+```
+apt-get update && apt-get install -y tesseract-ocr-eng
+pip3 install -r requirements.txt
+python3 -m flask run --host=0.0.0.0
+```
+## Demo
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cpwan/OCR-API/blob/master/demo.ipynb)
+
+
 ## About
 The code serves the API for OCR.
 The program accepts two endpoints: `image-sync` and `image`.
@@ -42,20 +61,5 @@ otherwise, return None
 }
 ```
 
-
-## Dependency
-- python 3.8
-- Flask
-
-## Build
-Option 1. Docker
-``docker-compose -f docker-compose.dev.yml up --build``
-
-Option 2. Manually install depedencies
-```
-apt-get update && apt-get install -y tesseract-ocr-eng
-pip3 install -r requirements.txt
-python3 -m flask run --host=0.0.0.0
-```
 
 
